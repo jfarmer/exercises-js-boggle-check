@@ -5,7 +5,6 @@ function newBoggleBoard() {
   {
     boggleBoard.push(['_', '_', '_', '_'])
   }
-  console.log(boggleBoard);
   return boggleBoard;
 }
 
@@ -14,24 +13,7 @@ function newBoggleBoard() {
  * Prints out a boggle board.
  */
 
-
-let die1 = ["A","A","E","E","G","N"];
-let die2 = ["E","L","R","T","T","Y"];
-let die3 = ["A","O","O","T","T","W"];
-let die4 = ["A","B","B","J","O","O"];
-let die5 = ["E","H","R","T","V","W"];
-let die6 = ["C","I","M","O","T","U"];
-let die7 = ["D","I","S","T","T","Y"];
-let die8 = ["E","I","O","S","S","T"];
-let die9 = ['D','E','L','R','V','Y'];
-let die10 = ['A','C','H','O','P','S'];
-let die11 = ['H','I','M','N','Q','U'];
-let die12 = ['E','E','I','N','S','U'];
-let die13 = ['E','E','G','H','N','W'];
-let die14 = ['A','F','F','K','P','S'];
-let die15 = ['H','L','N','N','R','Z'];
-let die16 = ['D','E','I','L','R','X'];
-
+let dice = ['AAEEGN','ELRTTY','AOOTTW','ABBJOO','EHRTVW','CIMOTU','DISTTY','EIOSST','DELRVY','ACHOPS','HIMNQU','EEINSU','EEGHNW','AFFKPS','HLNNRZ','DEILRX'];
 
 function printBoggleBoard(boggleBoard) {
   for (let row of boggleBoard) {
@@ -39,11 +21,24 @@ function printBoggleBoard(boggleBoard) {
   }
 }
 
+function randomInteger(min, max) {
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
 /**
  * Shake a boggle board and fill it with letters.
  */
 function shake(boggleBoard) {
-  // This is your job. :)
+  for (let row of boggleBoard)
+  {
+    for (i=0;i<=4;i++)
+    {
+      let index = dice[(randomInteger(0, dice.length - 1))];
+      row[i] = index[Math.floor(Math.random() * (7))];
+    }
+  }
   return boggleBoard;
 }
 
