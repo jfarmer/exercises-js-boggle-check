@@ -1,7 +1,7 @@
 function newBoggleBoard() {
 
   let boggleBoard = [];
-  for(i=0;i<=4;i++)
+  for(i=0;i<4;i++)
   {
     boggleBoard.push(['_', '_', '_', '_'])
   }
@@ -33,12 +33,13 @@ function randomInteger(min, max) {
 function shake(boggleBoard) {
   for (let row of boggleBoard)
   {
-    for (i=0;i<=4;i++)
+    for (i=0;i<4;i++)
     {
       let index = dice[(randomInteger(0, dice.length - 1))];
-      row[i] = index[Math.floor(Math.random() * (7))];
+      row[i] = index[Math.floor(Math.random() * (6))];
     }
   }
+  console.log(boggleBoard);
   return boggleBoard;
 }
 
