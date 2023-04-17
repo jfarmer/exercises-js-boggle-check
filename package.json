@@ -1,8 +1,8 @@
 {
   "name": "exercises-boggle-check",
   "version": "0.1.0",
-  "description": "JavaScript template",
-  "main": "index.js",
+  "description": "JavaScript Exercise: Check A Boggle Board",
+  "main": "boggle.js",
   "devDependencies": {
     "eslint": "^8.38.0",
     "eslint-config-standard": "^17.0.0",

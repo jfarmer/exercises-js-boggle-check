@@ -15,11 +15,11 @@ The second is the process of checking whether a particular word is present on th
 - [Resources](#resources)
 - [Remember To Ask Yourself](#remember-to-ask-yourself)
 - [Iterations](#iterations)
-  - [[v1] "Stupid" Boggle Board](#v1-stupid-boggle-board)
-  - [[v2] Smart(er) Boggle Board](#v2-smarter-boggle-board)
-  - [[v3] Dealing With Q](#v3-dealing-with-q)
-  - [[v4] Simple Word Checking](#v4-simple-word-checking)
-  - [[v5] Full Word Checking (Stretch)](#v5-full-word-checking-stretch)
+  - [\[v1\] "Stupid" Boggle Board](#v1-stupid-boggle-board)
+  - [\[v2\] Smart(er) Boggle Board](#v2-smarter-boggle-board)
+  - [\[v3\] Dealing With Q](#v3-dealing-with-q)
+  - [\[v4\] Simple Word Checking](#v4-simple-word-checking)
+  - [\[v5\] Full Word Checking (Stretch)](#v5-full-word-checking-stretch)
 
 ## Resources
 
@@ -91,9 +91,9 @@ Check out the [String.prototype.padEnd()][mdn-string-padend] function for an eas
 
 ### [v4] Simple Word Checking
 
-Normally, each letter of a word can appear next to the previous letter in any direction (vertical, horizontal, or diagonal). You can't use the same board cell twice.
+Normally, each letter of a word can appear next to the previous letter in any direction (vertical, horizontal, or diagonal). You can't use the same board cell twice, but the word "snakes" around the board.
 
-Instead, let's first solve a simpler version. In this version, a word is only ever entirely vertical, entirely horizontal, or entirely vertical.
+Instead, let's first solve a simpler version. In this version, a word is only ever entirely vertical, entirely horizontal, or entirely diagonal.
 
 Write pseudocode for your algorithm. If you're pairing, you and your pair should each write your own pseudocode and compare.
 
